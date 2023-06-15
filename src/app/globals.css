@@ -4,10 +4,12 @@
   --primary: #8DC3DC;
   --danger: #BB6373;
 
-  --primary-backgrond: #426270;
+  --primary-background: #426270;
   
   --secondary-text: #1C1217;
   --light-text: #fff;
+
+  --semi-bold: 500;
 }
 
 * {
@@ -27,3 +29,11 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}

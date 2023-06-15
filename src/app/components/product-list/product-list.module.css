@@ -1,0 +1,43 @@
+.container {
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 80%;
+    background-color: var(--primary-background);
+}
+
+.container h2 {
+    text-align: center;
+    color: var(--light-text);
+    margin-bottom: 0.5em;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.list li {
+    display: flex;
+    align-items: center;
+    
+    margin-block: 0.5em;
+    min-width: 45%;
+    min-height: 4em;
+    
+    color: var(--primary-background);
+    background: var(--light-text);
+    font-weight: var(--semi-bold);
+}
+
+.list li:hover {
+    background-color: var(--primary);
+    color: var(--light-text);
+}
+
+.list a {
+    display: flex;
+    flex: 1;
+    height: 100%;
+}
+

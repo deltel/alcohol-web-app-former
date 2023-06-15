@@ -5,14 +5,14 @@
     flex-direction: column;
 }
 
-.navbar a {
-    background-color: var(--primary-backgrond);
+.navbar li {
+    background-color: var(--primary-background);
     color: var(--light-text);
     padding: 5px 10px;
-    border: 4px solid var(--primary-backgrond);
+    border: 4px solid var(--primary-background);
 }
 
-.navbar a:hover {
+.navbar li:hover {
     background-color: var(--light-text);
-    color: var(--primary-backgrond);
+    color: var(--primary-background);
 }
