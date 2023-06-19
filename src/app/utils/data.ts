@@ -89,3 +89,30 @@ export function getOrderHistory(productId: string) {
         data,
     };
 }
+
+export function getOrdersList(orderId: string) {
+    return [
+        {
+            productName: 'Sorrel Rum',
+            quantity: 12,
+            revenue: 12000,
+        },
+        {
+            productName: 'Sorrel Rum',
+            quantity: 12,
+            revenue: 12000,
+        },
+        {
+            productName: 'Sorrel Rum',
+            quantity: 12,
+            revenue: 12000,
+        },
+        {
+            productName: 'Sorrel Rum',
+            quantity: 12,
+            revenue: 12000,
+        },
+    ];
+}
+
+export const getExpectedRevenue = (orderId: string) => 48000;

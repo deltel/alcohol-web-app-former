@@ -4,6 +4,7 @@ import styles from './product-details.module.css';
 import Card from '../../card/card';
 import Row from '../../row/row';
 import Table from '../../table/table';
+import Title from '../../title/title';
 
 async function getProductInfo(productId: string) {
     return Promise.resolve(getProduct(productId));
@@ -31,9 +32,7 @@ export default async function ProductDetails({
         <div className={styles.container}>
             <div className={styles.info}>
                 <div className={styles.left}>
-                    <Card>
-                        <h2 className={styles.title}>{productName}</h2>
-                    </Card>
+                    <Title title={productName} />
                     <Card dark>
                         <div className={styles.assets}>
                             <Row firstItem="Stocks" secondItem={stockLevel} />

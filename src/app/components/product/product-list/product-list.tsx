@@ -8,15 +8,22 @@ async function getData() {
     return Promise.resolve(getProductList());
 }
 
-export default async function ProductList() {
+export default async function ProductList({
+    single = false,
+}: {
+    single?: boolean;
+}) {
     const data = await getData();
+    const classes = single
+        ? `${styles.container} ${styles.singleWidth}`
+        : styles.container;
 
     return (
-        <div className={styles.container}>
+        <div className={classes}>
             <h2>Stocks</h2>
             <ul className={styles.list}>
                 {data.map(({ productId, productName, stockLevel }) => (
-                    <li>
+                    <li className={single ? styles.single : ''}>
                         <Link href={`/products/${productId}`}>
                             <ProductItem
                                 productName={productName}

@@ -1,0 +1,10 @@
+.list {
+    max-height: 12em;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-block: 1em;
+    color: var(--secondary-text);
+}

@@ -1,0 +1,33 @@
+.container {
+    width: 30%;
+    padding-top: 2em;
+    padding-bottom: 3em;
+    background-color: var(--primary-background);
+    align-self: center;
+    color: var(--primary-background);
+    position: relative;
+}
+
+.container > div:first-child {
+    position: absolute;
+    top: -2em;
+    left: 12.5%;
+    width: 75%;
+    text-align: center;
+}
+
+.container > div:last-child {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: var(--semi-bold);
+
+    position: absolute;
+    bottom: -3em;
+    left: 12.5%;
+    width: 75%;
+}
+
+.expectedRevenue {
+    font-size: 2em;
+}

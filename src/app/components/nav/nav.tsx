@@ -6,7 +6,7 @@ export default function Nav() {
         <nav className={styles.navbar}>
             <ul>
                 <li>
-                    <Link href="/orders">Orders</Link>
+                    <Link href="/orders/one">Orders</Link>
                 </li>
                 <li>
                     <Link href="/restock">Restock</Link>

@@ -7,6 +7,10 @@
     overflow-y: hidden;
 }
 
+.singleWidth {
+    max-width: 30%;
+}
+
 .container h2 {
     text-align: center;
     color: var(--light-text);
@@ -30,6 +34,10 @@
     color: var(--primary-background);
     background: var(--light-text);
     font-weight: var(--semi-bold);
+}
+
+.list li.single {
+    min-width: 90%;
 }
 
 .list li:hover {

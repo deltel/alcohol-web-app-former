@@ -46,10 +46,6 @@
         right: -2em;
 }
 
-.title {
-    color: var(--primary-background);
-}
-
 .assets, .revenue {
     font-weight: var(--semi-bold);
     display: flex;
