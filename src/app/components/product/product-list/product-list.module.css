@@ -3,6 +3,8 @@
     padding: 1em;
     max-width: 80%;
     background-color: var(--primary-background);
+    height: var(--max-height);
+    overflow-y: hidden;
 }
 
 .container h2 {

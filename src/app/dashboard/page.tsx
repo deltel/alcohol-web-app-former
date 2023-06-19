@@ -1,5 +1,5 @@
-import ProductList from '../components/product-list/product-list';
+import ProductList from '../components/product/product-list/product-list';
 
-export default function Default() {
+export default function Dashboard() {
     return <ProductList />;
 }

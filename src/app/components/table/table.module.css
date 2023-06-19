@@ -1,0 +1,20 @@
+.table {
+    margin: 0 auto;
+    background-color: #fff;
+    color: var(--primary-background);
+}
+
+.table th {
+    font-weight: var(--semi-bold);
+}
+
+.table, .table td, .table th {
+    border: 1px solid var(--primary-background);
+    border-collapse: collapse;
+}
+.table th,
+.table td {
+  padding: 5px 10px;
+  border-top-width: 0;
+  border-left-width: 0;
+}

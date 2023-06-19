@@ -1,20 +1,23 @@
 import Link from 'next/link';
 import styles from './product-list.module.css';
 
-import { getData } from '@/app/utils/data';
+import { getProductList } from '@/app/utils/data';
+import ProductItem from '../product-item/product-item';
 
-import ProductItem from './product-item/product-item';
+async function getData() {
+    return Promise.resolve(getProductList());
+}
 
-export default function ProductList() {
-    const data = getData();
+export default async function ProductList() {
+    const data = await getData();
 
     return (
         <div className={styles.container}>
             <h2>Stocks</h2>
             <ul className={styles.list}>
-                {data.map(({ productName, stockLevel }) => (
+                {data.map(({ productId, productName, stockLevel }) => (
                     <li>
-                        <Link href="/">
+                        <Link href={`/products/${productId}`}>
                             <ProductItem
                                 productName={productName}
                                 stockLevel={stockLevel}
