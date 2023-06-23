@@ -1,0 +1,15 @@
+.prompt {
+    text-align: center;
+    font-weight: var(--semi-bold);
+    margin-bottom: 0.5em;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 17em;
+}
+
+.buttonContainer button {
+    width: 6em;
+}

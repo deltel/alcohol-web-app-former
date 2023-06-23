@@ -1,0 +1,25 @@
+.item {
+    color: var(--secondary-text);
+    display: flex;
+    font-weight: var(--semi-bold);
+}
+
+.item > span {
+    display: flex;
+    padding: 0.5em;
+}
+
+.item > span:last-child {
+    justify-content: center;
+}
+
+.lightGreen {
+    background-color: var(--primary-background-50);
+    flex: 2;
+}
+
+.center {
+    background-color: var(--light-text);
+    flex: 3;
+    justify-content: space-between;
+}

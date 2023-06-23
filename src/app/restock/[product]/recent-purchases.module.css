@@ -1,0 +1,26 @@
+.flexContainer {
+    position: relative;
+    padding-block: 2em;
+}
+
+.flexContainer > div {
+    position: absolute;
+    top: -3em;
+    left: 15%;
+    min-width: 70%;
+    text-align: center;
+}
+
+.subHeading {
+    font-weight: var(--semi-bold);
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.list {
+
+}
+
+.list li {
+    margin-bottom: 0.5em;
+}

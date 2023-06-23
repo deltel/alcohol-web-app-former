@@ -197,3 +197,53 @@ const orderData: OrderInfo[] = [
 ];
 
 export const getOrderDetails = (orderId: string) => orderData;
+
+const recentPurchases = [
+    {
+        date: '21 Jul 2023',
+        source: 'Supply Store',
+        quantity: 12,
+        totalCost: 12000,
+    },
+    {
+        date: '21 Jul 2023',
+        source: 'Supply Store',
+        quantity: 12,
+        totalCost: 12000,
+    },
+    {
+        date: '21 Jul 2023',
+        source: 'Supply Store',
+        quantity: 12,
+        totalCost: 12000,
+    },
+    {
+        date: '21 Jul 2023',
+        source: 'Supply Store',
+        quantity: 12,
+        totalCost: 12000,
+    },
+    {
+        date: '21 Jul 2023',
+        source: 'Supply Store',
+        quantity: 12,
+        totalCost: 12000,
+    },
+    {
+        date: '21 Jul 2023',
+        source: 'Supply Store',
+        quantity: 12,
+        totalCost: 12000,
+    },
+    {
+        date: '21 Jul 2023',
+        source: 'Supply Store',
+        quantity: 12,
+        totalCost: 12000,
+    },
+];
+
+export const getRecentPurchases = (productId: string) => ({
+    recentPurchases,
+    productName: 'Sorrel Rum',
+});

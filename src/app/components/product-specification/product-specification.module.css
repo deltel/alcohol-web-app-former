@@ -1,0 +1,98 @@
+.heading {
+    position: absolute;
+    top: -2em;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    text-wrap: nowrap;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-block: 1em;
+    gap: 1em;
+}
+
+.content select {
+    padding: 0.5em;
+}
+
+.cart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart span {
+    padding: 0.5em;
+    background-color: var(--light-text);
+    color: var(--secondary-text);
+}
+
+.quantity {
+    display: flex;
+    min-width: 6em;
+}
+
+.quantity > * {
+    flex: 1;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.quantity > button {
+    border: none;
+    background-color: var(--primary);
+    color: var(--light-text);
+    font-weight: var(--semi-bold);
+}
+
+.priceMultiplier {
+    min-width: 6em;
+    display: flex;
+    justify-content: flex-end;
+    color: var(--secondary-text);
+}
+
+.sign {
+    background-color: var(--primary-background-50);
+}
+
+.price {
+    background-color: var(--light-text);
+    color: var(--secondary-text);
+}
+
+.total {
+    display: flex;
+    color: var(--secondary-text);
+}
+
+.total span {
+    flex: 1;
+    display: flex;
+    padding: 0.5em;
+}
+
+.total span:nth-child(odd) {
+    background-color: var(--light-text);
+}
+
+.total span:nth-child(even) {
+    background-color: var(--primary-background-50);
+    justify-content: flex-end;
+}
+
+.buttonContainer {
+    position: absolute;
+    bottom: -1em;
+    left: 10%;
+    right: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonContainer button {
+    width: 4.5em;
+    box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.25);
+}
