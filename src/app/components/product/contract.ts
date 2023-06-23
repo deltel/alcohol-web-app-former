@@ -29,3 +29,11 @@ export type ProductPreview = Pick<
     Product,
     'productId' | 'productName' | 'stockLevel'
 >;
+
+export type ProductOrder = Pick<Order, 'productName' | 'quantity'>;
+
+export interface OrderInfo {
+    customerName: string;
+    orderTotal: number;
+    items: ProductOrder[];
+}

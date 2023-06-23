@@ -1,18 +1,23 @@
 import { getOrdersList } from '@/app/utils/data';
-import styles from './order-list.module.css';
-import OrderItem from '../order-item/order-item';
+import OrderSummaryItem from '../order-item/order-summary-item';
+
+import styles from './order-summary-list.module.css';
 
 async function getData(orderId: string) {
     return Promise.resolve(getOrdersList(orderId));
 }
 
-export default async function OrderList({ orderId }: { orderId: string }) {
+export default async function OrderSummaryList({
+    orderId,
+}: {
+    orderId: string;
+}) {
     const orders = await getData(orderId);
     return (
         <ul className={styles.list}>
             {orders.map(({ productName, quantity, revenue }) => (
                 <li>
-                    <OrderItem
+                    <OrderSummaryItem
                         productName={productName}
                         quantity={quantity}
                         revenue={revenue}

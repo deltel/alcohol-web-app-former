@@ -3,6 +3,7 @@ import {
     ProductPreview,
     Order,
     TableColumns,
+    OrderInfo,
 } from '../components/product/contract';
 
 const dummyData: ProductPreview[] = [
@@ -115,4 +116,84 @@ export function getOrdersList(orderId: string) {
     ];
 }
 
-export const getExpectedRevenue = (orderId: string) => 48000;
+export const getOrderSummary = (orderId: string) => ({
+    expectedRevenue: 48000,
+    title: 'June',
+});
+
+const orderData: OrderInfo[] = [
+    {
+        customerName: 'Jane Doe',
+        orderTotal: 5000,
+        items: [
+            {
+                quantity: 3,
+                productName: 'Yellow Tail',
+            },
+            {
+                quantity: 5,
+                productName: 'Sorrel Rum',
+            },
+            {
+                quantity: 2,
+                productName: 'Red Label',
+            },
+        ],
+    },
+    {
+        customerName: 'Jane Doe',
+        orderTotal: 5000,
+        items: [
+            {
+                quantity: 3,
+                productName: 'Yellow Tail',
+            },
+            {
+                quantity: 5,
+                productName: 'Sorrel Rum',
+            },
+            {
+                quantity: 2,
+                productName: 'Red Label',
+            },
+        ],
+    },
+    {
+        customerName: 'Jane Doe',
+        orderTotal: 5000,
+        items: [
+            {
+                quantity: 3,
+                productName: 'Yellow Tail',
+            },
+            {
+                quantity: 5,
+                productName: 'Sorrel Rum',
+            },
+            {
+                quantity: 2,
+                productName: 'Red Label',
+            },
+        ],
+    },
+    {
+        customerName: 'Jane Doe',
+        orderTotal: 5000,
+        items: [
+            {
+                quantity: 3,
+                productName: 'Yellow Tail',
+            },
+            {
+                quantity: 5,
+                productName: 'Sorrel Rum',
+            },
+            {
+                quantity: 2,
+                productName: 'Red Label',
+            },
+        ],
+    },
+];
+
+export const getOrderDetails = (orderId: string) => orderData;

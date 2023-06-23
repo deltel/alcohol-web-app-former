@@ -1,0 +1,15 @@
+.heading {
+    text-align: center;
+}
+
+.list {
+    height: 80%;
+    margin-top: 10%;
+}
+
+.order {
+    background-color: var(--primary-background);
+    color: var(--light-text);
+    padding: 1em;
+    margin-bottom: 1em;
+}

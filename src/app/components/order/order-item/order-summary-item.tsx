@@ -1,6 +1,6 @@
-import styles from './order-item.module.css';
+import styles from './order-summary-item.module.css';
 
-export default function OrderItem({
+export default function OrderSummaryItem({
     productName,
     quantity,
     revenue,
