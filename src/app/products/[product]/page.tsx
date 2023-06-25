@@ -1,4 +1,4 @@
-import ProductList from '@/app/components/product/product-list/product-list';
+import ProductList from '@/app/components/list/product/product-list';
 import ProductDetails from '@/app/components/product/product-details/product-details';
 
 import styles from './page.module.css';

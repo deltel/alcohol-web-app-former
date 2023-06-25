@@ -17,6 +17,12 @@ export interface Order {
     profit: number;
 }
 
+export interface Customer {
+    customerId: string;
+    customerName: string;
+    balance: number;
+}
+
 export interface TableColumns {
     Header: string;
     columns: {

@@ -1,4 +1,4 @@
-import ProductList from '@/app/components/product/product-list/product-list';
+import ProductList from '@/app/components/list/product/product-list';
 import OrderSummary from '@/app/components/order/order-summary/order-summary';
 import OrderDetailsList from '@/app/components/order/order-details-list/order-details-list';
 

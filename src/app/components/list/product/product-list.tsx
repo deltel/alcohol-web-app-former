@@ -1,8 +1,9 @@
 import Link from 'next/link';
-import styles from './product-list.module.css';
+import styles from '../list.module.css';
 
 import { getProductList } from '@/app/utils/data';
-import ProductItem from '../product-item/product-item';
+import ListItem from '../list-item';
+import { RouteParams } from '@/app/utils/route-params';
 
 async function getData() {
     return Promise.resolve(getProductList());
@@ -24,11 +25,8 @@ export default async function ProductList({
             <ul className={styles.list}>
                 {data.map(({ productId, productName, stockLevel }) => (
                     <li className={single ? styles.single : ''}>
-                        <Link href={`/products/${productId}`}>
-                            <ProductItem
-                                productName={productName}
-                                stockLevel={stockLevel}
-                            />
+                        <Link href={`/${RouteParams.Products}/${productId}`}>
+                            <ListItem label={productName} figure={stockLevel} />
                         </Link>
                     </li>
                 ))}

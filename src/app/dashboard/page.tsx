@@ -1,4 +1,4 @@
-import ProductList from '../components/product/product-list/product-list';
+import ProductList from '../components/list/product/product-list';
 
 export default function Dashboard() {
     return <ProductList />;

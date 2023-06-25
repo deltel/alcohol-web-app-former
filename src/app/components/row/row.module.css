@@ -8,3 +8,8 @@
 .padding {
     padding-inline: 1em;
 }
+
+.danger {
+    background-color: var(--danger);
+    color: var(--light-text);
+}

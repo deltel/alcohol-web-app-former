@@ -4,9 +4,10 @@ import {
     Order,
     TableColumns,
     OrderInfo,
+    Customer,
 } from '../components/product/contract';
 
-const dummyData: ProductPreview[] = [
+const dummyProducts: ProductPreview[] = [
     { productId: 'sorrel-rum', productName: 'Sorrel Rum', stockLevel: 12 },
     { productId: 'sorrel-rum', productName: 'Sorrel Rum', stockLevel: 12 },
     { productId: 'sorrel-rum', productName: 'Sorrel Rum', stockLevel: 12 },
@@ -31,7 +32,35 @@ const dummyData: ProductPreview[] = [
 
 export function getProductList() {
     console.count('fetching product list');
-    return dummyData;
+    return dummyProducts;
+}
+
+const dummyCustomers: Customer[] = [
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'Jane Doe', customerName: 'Jane Doe', balance: 0 },
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+];
+
+export function getCustomerList() {
+    console.count('fetching customer list');
+    return dummyCustomers;
 }
 
 const productInfo: Product = {
