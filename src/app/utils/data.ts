@@ -5,6 +5,8 @@ import {
     TableColumns,
     OrderInfo,
     Customer,
+    CustomerOrder,
+    CustomerPreview,
 } from '../components/product/contract';
 
 const dummyProducts: ProductPreview[] = [
@@ -35,27 +37,27 @@ export function getProductList() {
     return dummyProducts;
 }
 
-const dummyCustomers: Customer[] = [
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
-    { customerId: 'Jane Doe', customerName: 'Jane Doe', balance: 0 },
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
-    { customerId: 'John Doe', customerName: 'John Doe', balance: 12000 },
+const dummyCustomers: CustomerPreview[] = [
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'jane-doe', customerName: 'Jane Doe', balance: 0 },
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
+    { customerId: 'john-doe', customerName: 'John Doe', balance: 12000 },
 ];
 
 export function getCustomerList() {
@@ -75,6 +77,78 @@ const productInfo: Product = {
 };
 
 export const getProduct = (productId: string) => productInfo;
+
+export function getCustomerOrders(customerId: string) {
+    const columns: TableColumns[] = [
+        {
+            Header: 'Order History',
+            columns: [
+                {
+                    Header: 'Date Ordered',
+                    accessor: 'dateOrdered',
+                },
+                {
+                    Header: 'Date Paid',
+                    accessor: 'datePaid',
+                },
+                {
+                    Header: 'Product Name',
+                    accessor: 'productName',
+                },
+                {
+                    Header: 'Quantity',
+                    accessor: 'quantity',
+                },
+                {
+                    Header: 'Value',
+                    accessor: 'value',
+                },
+                {
+                    Header: 'Paid',
+                    accessor: 'paid',
+                },
+            ],
+        },
+    ];
+    const data: CustomerOrder[] = [
+        {
+            dateOrdered: 'June',
+            datePaid: null,
+            productName: 'Sorrel Rum',
+            quantity: 6,
+            value: 1200,
+            paid: false,
+        },
+    ];
+
+    return {
+        columns,
+        data,
+    };
+}
+
+const customerInfoJohn: Customer = {
+    customerId: 'john-doe',
+    customerName: 'John Doe',
+    dueDate: '21 Jul 2023',
+    balance: 80000,
+    totalOrders: 6,
+    totalRevenue: 40000,
+};
+
+const customerInfoJane: Customer = {
+    customerId: 'jane-doe',
+    customerName: 'Jane Doe',
+    dueDate: '21 Jul 2023',
+    balance: 0,
+    totalOrders: 6,
+    totalRevenue: 40000,
+};
+
+export const getCustomerInfo = (customerId: string) =>
+    customerId === customerInfoJohn.customerId
+        ? customerInfoJohn
+        : customerInfoJane;
 
 export function getOrderHistory(productId: string) {
     const columns: TableColumns[] = [
@@ -119,6 +193,21 @@ export function getOrderHistory(productId: string) {
         data,
     };
 }
+
+export const getCustomerFavourites = (customerId: string) => [
+    {
+        productName: 'Sorrel Rum',
+        revenue: 50000,
+    },
+    {
+        productName: 'Stone Ginger',
+        revenue: 45000,
+    },
+    {
+        productName: 'Red Label',
+        revenue: 40000,
+    },
+];
 
 export function getOrdersList(orderId: string) {
     return [

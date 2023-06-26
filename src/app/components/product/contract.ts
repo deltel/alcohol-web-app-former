@@ -17,11 +17,28 @@ export interface Order {
     profit: number;
 }
 
+export interface CustomerOrder {
+    dateOrdered: string;
+    datePaid: string | null;
+    productName: string;
+    quantity: number;
+    value: number;
+    paid: boolean;
+}
+
 export interface Customer {
     customerId: string;
     customerName: string;
     balance: number;
+    dueDate: string;
+    totalOrders: number;
+    totalRevenue: number;
 }
+
+export type CustomerPreview = Pick<
+    Customer,
+    'customerId' | 'customerName' | 'balance'
+>;
 
 export interface TableColumns {
     Header: string;

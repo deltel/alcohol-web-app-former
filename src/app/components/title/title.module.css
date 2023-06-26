@@ -2,3 +2,8 @@
     color: var(--primary-background);
     background-color: var(--light-text);
 }
+
+.danger {
+    color: var(--light-text);
+    background-color: var(--danger);
+}

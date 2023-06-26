@@ -5,12 +5,22 @@ export default function Card({
     children,
     style = {},
     className = '',
+    danger = false,
 }: {
     dark?: boolean;
     children: React.ReactNode;
     style?: { [property: string]: any };
     className?: string;
+    danger?: boolean;
 }) {
+    const styleOverride = danger
+        ? {
+              ...style,
+              backgroundColor: 'var(--danger)',
+              color: 'var(--light-text)',
+          }
+        : style;
+
     return (
         <div
             className={
@@ -18,7 +28,7 @@ export default function Card({
                     ? `${styles.card} ${className}`
                     : `${styles.whiteBackground} ${className}`
             }
-            style={style}
+            style={styleOverride}
         >
             {children}
         </div>

@@ -33,7 +33,7 @@ main {
   margin: 0 auto;
 }
 
-ul {
+ul, ol {
   list-style: none;
 }
 

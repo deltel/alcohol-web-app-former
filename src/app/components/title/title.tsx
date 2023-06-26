@@ -5,13 +5,15 @@ import styles from './title.module.css';
 export default function Title({
     title,
     className = '',
+    danger = false,
 }: {
     title: string;
     className?: string;
+    danger?: boolean;
 }) {
     return (
-        <Card className={className}>
-            <h2 className={styles.title}>{title}</h2>
+        <Card className={className} danger={danger}>
+            <h2 className={danger ? styles.danger : styles.title}>{title}</h2>
         </Card>
     );
 }

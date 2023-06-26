@@ -7,3 +7,8 @@
     font-size: 1.3em;
     font-weight: var(--semi-bold);
 }
+
+.danger {
+    background-color: var(--danger);
+    color: var(--light-text);
+}
