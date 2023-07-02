@@ -9,12 +9,26 @@ export interface Product {
     totalProfit: number;
 }
 
+export interface RestockProduct {
+    productId: string;
+    productName: string;
+    quantity: number;
+    unitPrice: number;
+    totalPrice: number;
+}
+
 export interface Order {
     date: string;
     productName: string;
     quantity: number;
     cost: number;
     profit: number;
+}
+
+export interface OrderPreview {
+    productName: string;
+    quantity: number;
+    revenue: number;
 }
 
 export interface CustomerOrder {

@@ -1,26 +1,31 @@
-import { getOrderSummary } from '@/app/utils/data';
+'use client';
+
+import styles from './order-summary.module.css';
+
 import Card from '../../card/card';
 import Title from '../../title/title';
 import OrderSummaryList from '../order-summary-list/order-summary-list';
 
-import styles from './order-summary.module.css';
+import { OrderPreview } from '../../product/contract';
 
-export async function getData(orderId: string) {
-    return Promise.resolve(getOrderSummary(orderId));
-}
-
-export default async function OrderSummary({ orderId }: { orderId: string }) {
-    const { expectedRevenue, title } = await getData(orderId);
-
+export default function OrderSummary({
+    title,
+    subTitle,
+    amount,
+    orders,
+}: {
+    title: string;
+    subTitle: string;
+    amount: number;
+    orders: OrderPreview[];
+}) {
     return (
         <div className={styles.container}>
             <Title title={title} />
-            <OrderSummaryList orderId={orderId} />
+            <OrderSummaryList orders={orders} />
             <Card>
-                <span>Expected Revenue</span>
-                <span className={styles.expectedRevenue}>
-                    {expectedRevenue}
-                </span>
+                <span>{subTitle}</span>
+                <span className={styles.amount}>{amount}</span>
             </Card>
         </div>
     );

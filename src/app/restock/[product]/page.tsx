@@ -1,6 +1,6 @@
-import { getRecentPurchases } from '@/app/utils/data';
-
 import styles from './recent-purchases.module.css';
+
+import { getRecentPurchases } from '@/app/utils/data';
 import Card from '@/app/components/card/card';
 import Title from '@/app/components/title/title';
 import RecentItem from '@/app/components/recent/recent-item/recent-item';
@@ -12,9 +12,9 @@ async function getData(productId: string) {
 export default async function RecentPurchases({
     params,
 }: {
-    params: { productId: string };
+    params: { product: string };
 }) {
-    const { productName, recentPurchases } = await getData(params.productId);
+    const { productName, recentPurchases } = await getData(params.product);
 
     return (
         <Card dark style={{ width: '100%' }}>

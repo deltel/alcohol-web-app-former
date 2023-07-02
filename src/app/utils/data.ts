@@ -7,6 +7,7 @@ import {
     Customer,
     CustomerOrder,
     CustomerPreview,
+    OrderPreview,
 } from '../components/product/contract';
 
 const dummyProducts: ProductPreview[] = [
@@ -209,7 +210,7 @@ export const getCustomerFavourites = (customerId: string) => [
     },
 ];
 
-export function getOrdersList(orderId: string) {
+export function getOrdersList(orderId: string): OrderPreview[] {
     return [
         {
             productName: 'Sorrel Rum',
@@ -363,5 +364,5 @@ const recentPurchases = [
 
 export const getRecentPurchases = (productId: string) => ({
     recentPurchases,
-    productName: 'Sorrel Rum',
+    productName: productId === 'sorrel-rum' ? 'Sorrel Rum' : 'Red Label',
 });
