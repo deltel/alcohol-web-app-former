@@ -118,7 +118,7 @@ export function getCustomerOrders(customerId: string) {
             productName: 'Sorrel Rum',
             quantity: 6,
             value: 1200,
-            paid: false,
+            paid: 'No',
         },
     ];
 

@@ -5,12 +5,11 @@ import {
 } from '@/app/utils/data';
 import Card from '../../card/card';
 import Row from '../../row/row';
-import Table from '../../table/table';
 import Title from '../../title/title';
 import { Customer } from '../../product/contract';
-import Button from '../../button/button';
 
 import styles from './customer-details.module.css';
+import CustomerOrdersTable from '../customer-table/customer-orders-table';
 
 async function getCustomerDetails(customerId: string) {
     return Promise.resolve(getCustomerInfo(customerId));
@@ -72,12 +71,7 @@ export default async function CustomerDetails({
                     </Card>
                 </div>
             </div>
-            <div className={styles.table}>
-                <span className={styles.badge}>
-                    <Button label="Credit" danger />
-                </span>
-                <Table columns={columns} data={data} />
-            </div>
+            <CustomerOrdersTable columns={columns} data={data} />
         </div>
     );
 }

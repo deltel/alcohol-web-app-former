@@ -33,11 +33,11 @@ export interface OrderPreview {
 
 export interface CustomerOrder {
     dateOrdered: string;
-    datePaid: string | null;
+    datePaid: Date | string | null;
     productName: string;
     quantity: number;
     value: number;
-    paid: boolean;
+    paid: string;
 }
 
 export interface Customer {
